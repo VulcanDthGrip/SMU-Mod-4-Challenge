@@ -5,7 +5,7 @@
 
 *{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #355
@@ -20,7 +20,7 @@ margin-bottom: 1rem;
 
 h1{
     font-size: 5.4rem;
-    color: #56a5eb;
+    color: orange;
     margin-bottom: 5rem;
 }
 
@@ -30,6 +30,9 @@ h1 > span {
 }
 
 h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: orange;
     font-size: 4.2rem;
     margin-bottom: 4rem;
     font-weight: 700;
@@ -48,6 +51,7 @@ font-weight: 500;
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 .container > * {
@@ -100,3 +104,27 @@ font-weight: 500;
     cursor: not-allowed;
     box-shadow: none;
     transform: none
+  }
+  /* FORMS */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+
+  

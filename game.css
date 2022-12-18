@@ -23,3 +23,30 @@
   .choice-text {
     padding: 1.5rem;
   }
+  .correct {
+    background: green; 
+}
+  .incorrect {
+    background: red;
+}
+  /* HUD Display during game */
+#hud {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 3rem;
+  }
+
+  .hud-main-text {
+    text-align: center;
+  }
+  #timer {
+    font-size: 2rem;
+}
+.question {
+  display: flex;
+}

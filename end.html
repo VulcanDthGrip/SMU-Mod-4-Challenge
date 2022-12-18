@@ -7,16 +7,26 @@
     <title>Congrats!</title>
     <link rel="stylesheet" href="app.css" />
   </head>
+  <style>
+    body {
+        background-image: url("Images/QuizBG1.jpeg");
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+</style>
   <body>
     <div class="container">
       <div id="end" class="flex-center flex-column">
-        <h1 id="finalScore"></h1>
+        <h1 id="finalScore">
+
+        </h1>
         <form>
           <input
             type="text"
+            class="formInput"
             name="username"
             id="username"
-            placeholder="username"
+            placeholder="Player Name"
           />
           <button
             type="submit"
@@ -24,10 +34,10 @@
             id="saveScoreBtn"
             onclick="saveHighScore(event)"
             disabled
-          >
+            >
             Save
           </button>
-        </form>
+          </form>
         <a class="btn" href="/game.html">Play Again</a>
         <a class="btn" href="/">Go Home</a>
       </div>
