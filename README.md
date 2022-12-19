@@ -25,7 +25,7 @@ And each category contains and HTML, CSS, and JS file. Each category is linked t
   ## Code Example
   ![Screenshot 2022-12-19 at 1 35 03 PM](https://user-images.githubusercontent.com/112414393/208506077-9bd13f04-b069-45d5-bb8b-246fdc004070.png)
   
-  ##Resources
+  ## Resources
   1.Gitlab: https://smu.bootcampcontent.com/SMU-Coding-Bootcamp/SMU-VIRT-FSF-PT-11-2022-U-LOLC/-/tree/main/04-Web-APIs/02-Challenge
   2.Google: https://www.google.com/search?q=Build+a+quiz+in+javascript&oq=Build+a+quiz+in+javascript+&aqs=chrome..69i57j0i22i30j69i60l3.8808j0j15&sourceid=chrome&ie=UTF-8
   3.Youtube: https://www.youtube.com/@JamesQQuick
