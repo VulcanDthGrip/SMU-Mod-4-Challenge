@@ -20,8 +20,7 @@ The build behind this game is compartmentalized into several categories:
 And each category contains and HTML, CSS, and JS file. Each category is linked to each other via the <script> element.
 
   # Mockup Example
-  
-  <img width="1377" alt="Screenshot 2022-12-19 at 1 34 31 PM" src="https://user-images.githubusercontent.com/112414393/208505924-6a721fa7-fed7-4374-853d-67f2cac2f479.png">
+  <img width="1377" alt="Screenshot 2022-12-19 at 1 34 31 PM" src="https://user-images.githubusercontent.com/112414393/208508065-a4fb4750-63ae-4fca-a03b-6f25022adac7.png">
 
   
   # Code Example
