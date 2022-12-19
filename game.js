@@ -2,18 +2,19 @@ const questions = document.getElementById('question')
 const choices = Array.from(document.getElementsByClassName('choice-text'))
 const questionCounterText = document.getElementById('questionCounter')
 const scoreText = document.getElementById('score')
+// Not able to get timer to function
 const timer = document.querySelector('#time-left')
 
 let currentQuestion = {}
 let acceptingAnswers = false
 let score = 0
 let questionCounter = 0
-let availableQuestions = []
-let time = 15
-
+let availablequestionsField= []
+let time = 60
+// questionsFieldare not being displayed when quiz starts
 let question = [
     {
-        question:"JavaScript is a   -side programming language?",
+        prompt:"JavaScript is a   -side programming language?",
         choice1: 'Client',
         choice2: 'Server',
         choice3: 'Both',
@@ -21,7 +22,7 @@ let question = [
         answer: 3
     },
     {
-        question: "Which of the following will write the message 'Hello DataFlair!' in an alert box?",
+        prompt: "Which of the following will write the message 'Hello DataFlair!' in an alert box?",
         choice1: "alertbox('Hello DataFlar!')",
         choice2: "alert(Hello DataFlair!)",
         choice3: "msgAlert('Hello DataFlair!)",
@@ -29,7 +30,7 @@ let question = [
         answer: 4
     },
     {
-        question: "Which are the correct 'if' statements to execute certain code if 'x' is equal to 2?",
+        prompt: "Which are the correct 'if' statements to execute certain code if 'x' is equal to 2?",
         choice1: "if(x 2)",
         choice2: "if(x=2)",
         choice3: "if(x==2);",
@@ -37,7 +38,7 @@ let question = [
         answer: 3
     },
     {
-        question: "How do you find the minimum of x and y using Javascript?",
+        prompt: "How do you find the minimum of x and y using Javascript?",
         choice1: "min(x,y)",
         choice2: "Math.min(x,y)",
         choice3: "Math.min(xy)",
@@ -53,6 +54,7 @@ const TIMER_UP = 5
 const TIMER_DOWN = 10
 
 startGame = () => {
+    countdown_start()
     questionCounter = 0
     score = 0
     availableQuestions = [...question]
@@ -60,10 +62,12 @@ startGame = () => {
 }
 
 countdown_start = () => {
-    time = 15
+    time = 60
         const gameTimer = setInterval(function() {
             time--
             timer.textContent = "Time: " + time
+            // test w console log
+            console.log(time)
             
             if (time <= 0) {
                 clearInterval(gameTimer)
@@ -85,7 +89,8 @@ getNewQuestion = () => {
     
     const questionIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionIndex]
-    question.innerText = currentQuestion.question
+    questions.innerText = currentQuestion.prompt
+    console.log(currentQuestion.prompt)
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
@@ -123,7 +128,7 @@ choices.forEach((choice) => {
       score += num;
       scoreText.innerText = score
     }
-
+// time countdown
     incrementTime = num => {
         time += num
         timer.innerText = time
