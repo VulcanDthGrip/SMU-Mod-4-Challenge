@@ -2,7 +2,6 @@ const questions = document.getElementById('question')
 const choices = Array.from(document.getElementsByClassName('choice-text'))
 const questionCounterText = document.getElementById('questionCounter')
 const scoreText = document.getElementById('score')
-// Not able to get timer to function
 const timer = document.querySelector('#time-left')
 
 let currentQuestion = {}
@@ -11,7 +10,7 @@ let score = 0
 let questionCounter = 0
 let availablequestionsField= []
 let time = 60
-// questionsFieldare not being displayed when quiz starts
+// questions provided 
 let question = [
     {
         prompt:"JavaScript is a   -side programming language?",
@@ -52,7 +51,7 @@ const CORRECT_BONUS = 10
 const MAX_QUESTIONS = 4
 const TIMER_UP = 5
 const TIMER_DOWN = 10
-
+// Start game function
 startGame = () => {
     countdown_start()
     questionCounter = 0
@@ -60,7 +59,7 @@ startGame = () => {
     availableQuestions = [...question]
     getNewQuestion()
 }
-
+// Countdown timer function
 countdown_start = () => {
     time = 60
         const gameTimer = setInterval(function() {
@@ -76,7 +75,7 @@ countdown_start = () => {
             }
         }, 1000)
 }
-
+// Question prompts are cycled in this function
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     
@@ -100,7 +99,7 @@ getNewQuestion = () => {
     availableQuestions.splice(questionIndex, 1)
     acceptingAnswers = true
 }
-
+// Choice prompts are given for each correlated question in this function
 choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         if (!acceptingAnswers) return
@@ -123,7 +122,7 @@ choices.forEach((choice) => {
         }, 1000)
       })
     })
-    
+    // Correct scores are incremented 
     incrementScore = num => {
       score += num;
       scoreText.innerText = score
