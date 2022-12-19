@@ -1,5 +1,7 @@
 ## SMU-Mod-4-Challenge - Javascript Quiz    
 
+# URL: https://vulcandthgrip.github.io/SMU-Mod-4-Challenge/
+
 The purpose of this challenge was to develop and deploy a quiz that contained the following:
 1.  Several questions and a list of answers to choose from
 2.  Points are given when the correct answer is chosen by the user
